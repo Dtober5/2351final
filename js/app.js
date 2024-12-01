@@ -24,7 +24,7 @@ function createDeck() {
             var card = {
                 suit: suits[i],
                 value: values[j],
-                image: "assets/" + values[j] + "_of_" + suits[i] + ".png" // Updated path
+                image: values[j] + "_of_" + suits[i] + ".png" // Adjusted for the new file path
             };
             deck.push(card); // Add the card to the deck
         }
@@ -73,11 +73,11 @@ function dealCard(hand, handDiv) {
     hand.push(card); // Add the card to the player's or dealer's hand
 
     var cardBack = document.createElement("img");
-    cardBack.src = "assets/back.png"; // Updated path
+    cardBack.src = "back.png"; // Adjusted for the new file path
     cardBack.alt = "Card Back";
 
     var cardFace = document.createElement("img");
-    cardFace.src = card.image;
+    cardFace.src = card.image; // Adjusted for the new file path
     cardFace.alt = card.value + " of " + card.suit;
     cardFace.style.visibility = "hidden";
 
