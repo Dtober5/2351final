@@ -15,8 +15,11 @@ var deckImage = document.getElementById("deck-image");
 
 // Function to create a new deck of cards
 function createDeck() {
-    var suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
-    var values = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+    var suits = ["hearts", "diamonds", "clubs", "spades"]; // Lowercase suits
+    var values = [
+        "ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+        "jack", "queen", "king"
+    ]; // Lowercase values
     deck = []; // Start with an empty deck
 
     for (var i = 0; i < suits.length; i++) {
@@ -24,7 +27,7 @@ function createDeck() {
             var card = {
                 suit: suits[i],
                 value: values[j],
-                image: "./" + values[j] + "_of_" + suits[i] + ".png" // Adjusted for the new file path
+                image: "./" + values[j] + "_of_" + suits[i] + ".png" // Use lowercase paths
             };
             deck.push(card); // Add the card to the deck
         }
@@ -48,10 +51,10 @@ function calculateScore(hand) {
 
     for (var i = 0; i < hand.length; i++) {
         var card = hand[i];
-        if (card.value === "Ace") {
+        if (card.value === "ace") {
             aces++;
             score += 11;
-        } else if (card.value === "Jack" || card.value === "Queen" || card.value === "King") {
+        } else if (card.value === "jack" || card.value === "queen" || card.value === "king") {
             score += 10;
         } else {
             score += parseInt(card.value, 10);
@@ -73,11 +76,11 @@ function dealCard(hand, handDiv) {
     hand.push(card); // Add the card to the player's or dealer's hand
 
     var cardBack = document.createElement("img");
-    cardBack.src = "back.png"; // Adjusted for the new file path
+    cardBack.src = "./back.png"; // Lowercase file path
     cardBack.alt = "Card Back";
 
     var cardFace = document.createElement("img");
-    cardFace.src = card.image; // Adjusted for the new file path
+    cardFace.src = card.image; // Use card's lowercase image path
     cardFace.alt = card.value + " of " + card.suit;
     cardFace.style.visibility = "hidden";
 
