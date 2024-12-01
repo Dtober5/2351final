@@ -24,7 +24,7 @@ function createDeck() {
             var card = {
                 suit: suits[i],
                 value: values[j],
-                image: values[j] + "_of_" + suits[i] + ".png" // Adjusted for the new file path
+                image: "./" + values[j] + "_of_" + suits[i] + ".png" // Adjusted for the new file path
             };
             deck.push(card); // Add the card to the deck
         }
