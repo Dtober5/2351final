@@ -24,7 +24,7 @@ function createDeck() {
             var card = {
                 suit: suits[i],
                 value: values[j],
-                image: "assets/cards/" + values[j] + "_of_" + suits[i] + ".png"
+                image: "assets/" + values[j] + "_of_" + suits[i] + ".png" // Updated path
             };
             deck.push(card); // Add the card to the deck
         }
@@ -73,7 +73,7 @@ function dealCard(hand, handDiv) {
     hand.push(card); // Add the card to the player's or dealer's hand
 
     var cardBack = document.createElement("img");
-    cardBack.src = "assets/cards/back.png";
+    cardBack.src = "assets/back.png"; // Updated path
     cardBack.alt = "Card Back";
 
     var cardFace = document.createElement("img");
