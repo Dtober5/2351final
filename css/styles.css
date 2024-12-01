@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e2a38;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #191919;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#deck-area {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+#deck-area img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds space between cards */
+    min-height: 150px;
+    position: relative; /* Required for animations */
+}
+
+.hand img {
+    width: 80px;
+    height: auto;
+    position: relative;
+}
+
+#player-area, #dealer-area {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#controls {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d43c00;
+}
